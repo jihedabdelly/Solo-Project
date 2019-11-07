@@ -1,0 +1,57 @@
+body {
+	background-image: url(back.jpg) ;
+	background-size: 100%;
+
+	width: 100%;
+	
+	box-sizing: border-box;
+	overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+	height: 10%;
+	display: flex;
+	
+}
+main section{
+	padding: 5%;
+	display: grid;
+	grid-gap: 50%;
+	grid-template-areas: "a b c"
+						 "d e f"	
+						 "g h i";
+    
+}
+footer {
+	height: 10%
+}
+#shape1 {
+	grid-area: a;
+	
+	color: yellow;
+}
+ #shape2 {
+	grid-area: b;
+}
+#shape3 {
+	grid-area: c;
+}
+#shape4 {
+	grid-area: d;
+}
+#shape5 {
+	grid-area: e;
+}
+#shape6 {
+	grid-area: f;
+}
+#shape7 {
+	grid-area: g;
+}
+#shape8 {
+	grid-area: h;
+}
+#shape9 {
+	grid-area: i;
+}
