@@ -74,9 +74,10 @@ $('#sphere').on('click', function() {
 	//$('#container').css('filter', 'blur(10px)')
 	$('#popupSphere').show()
 
-	radius = $('#sr').val()
+	$('button').on('click', function(){
+	  radius = $('#sr').val()
 
-	
+ })
 	
 })
 
