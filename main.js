@@ -5,17 +5,17 @@ function sphere(radius){
 	}
 }
 
-function cone(radius, height){
-	return {
-		volume : (radius**2) * Math.PI * height/3,
-		area : Math.PI * radius *(Math.sqrt((height**2) + (radius**2)) + radius)
-	}
-}
-
 function cube(side){
 	return {
 		volume : side**3 ,
 		area : 6 * (radius**2) 
+	}
+}
+
+function cone(radius, height){
+	return {
+		volume : (radius**2) * Math.PI * height/3,
+		area : Math.PI * radius *(Math.sqrt((height**2) + (radius**2)) + radius)
 	}
 }
 

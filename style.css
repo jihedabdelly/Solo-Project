@@ -1,57 +1,94 @@
 body {
-	background-image: url(back.jpg) ;
-	background-size: 100%;
-
-	width: 100%;
 	
-	box-sizing: border-box;
+	background: #c2e59c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	
+	
+	
 	overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll;
+}
+
+h1 {
+	margin: 10px auto 15px auto;
 }
 
 header {
-	height: 10%;
+	height: 5%;
 	display: flex;
 	
 }
-main section{
+main #container {
 	padding: 5%;
+	max-width: 100%;
+	max-height: 100%;
 	display: grid;
-	grid-gap: 50%;
 	grid-template-areas: "a b c"
 						 "d e f"	
 						 "g h i";
-    
+    grid-gap: 15%;
+
 }
-footer {
-	height: 10%
-}
-#shape1 {
+
+
+
+
+#sphere {
 	grid-area: a;
 	
-	color: yellow;
 }
- #shape2 {
+ #cube {
 	grid-area: b;
 }
-#shape3 {
+#cone {
 	grid-area: c;
 }
-#shape4 {
+#cuboid {
 	grid-area: d;
 }
-#shape5 {
+#cylinder {
 	grid-area: e;
 }
-#shape6 {
+#torus {
 	grid-area: f;
 }
-#shape7 {
+#tetrahedron {
 	grid-area: g;
 }
-#shape8 {
+#sqrPyramid {
 	grid-area: h;
 }
-#shape9 {
+#icosahedron {
 	grid-area: i;
 }
+
+///////////////////////////
+
+
+.shape {
+	background-color: dodgerblue;
+    padding: 1rem;
+    max-width: 30%;
+    max-height: 30%;
+
+}
+
+.shapes {
+	max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem
+
+}
+
+img {
+	max-width: 200px;
+    max-height: 100px;
+}
+
+
+html { font-size: 22px; }
+body { padding: 1rem; }
+
