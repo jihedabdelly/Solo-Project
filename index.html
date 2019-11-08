@@ -14,54 +14,133 @@
 	</header>
 	<main>
 		<div id="container" class="shapes">
-			<div id="sphere" class="shape">
-				<h3>Sphere</h3>
-				<img src="shapes/sphere.png">
+			<div class="shape">
+				<div id="sphere">
+					<h3>Sphere</h3>
+					<img src="shapes/sphere.png">
+				</div>
 				<details>Has one radius</details>
 			</div>
-			<div id="cube" class="shape">
-				<h3>Cube</h3>
-				<img src="shapes/cube.png">
+			<div class="shape">
+				<div id="cube">
+					<h3>Cube</h3>
+					<img src="shapes/cube.png">
+				</div>
 				<details>Has one side</details>
 			</div>
-			<div id="cone" class="shape">
-				<h3>Cone</h3>
-				<img src="shapes/cone.png">
+			<div class="shape">
+				<div id="cone">
+					<h3>Cone</h3>
+					<img src="shapes/cone.png">
+				</div>
 				<details>Has a circle with a radius as a base and a height</details>
 			</div>
-			<div id="cuboid" class="shape">
-				<h3>Cuboid</h3>
-				<img src="shapes/cuboid.png">
+			<div class="shape">
+				<div id="cuboid">
+					<h3>Cuboid</h3>
+					<img src="shapes/cuboid.png">
+				</div>
 				<details>Has a length, width and height</details>
 			</div>
-			<div id="cylinder" class="shape">
-				<h3>Cylinder</h3>
-				<img src="shapes/cylinder.png">
+			<div class="shape">
+				<div id="cylinder">
+					<h3>Cylinder</h3>
+					<img src="shapes/cylinder.png">
+				</div>
 				<details>Has a circle with a radius as a base and a height</details>
 			</div>
-			<div id="torus" class="shape">
-				<h3>Torus</h3>
-				<img src="shapes/torus.png">
+			<div class="shape">
+				<div id="torus">
+					<h3>Torus</h3>
+					<img src="shapes/torus.png">
+				</div>
 				<details>Commonly a Donut, has minor radius and major radius</details>
 			</div>
-			<div id="tetrahedron" class="shape">
-				<h3>Tetrahedron</h3>
-				<img src="shapes/tetrahedron.png">
+			<div class="shape">
+				<div id="tetrahedron">
+					<h3>Tetrahedron</h3>
+					<img src="shapes/tetrahedron.png">
+				</div>
 				<details>Pyramid with four faces as regular triangles having one side</details>
 			</div>
-			<div id="sqrPyramid" class="shape">
-				<h3>Square Pyramid</h3>
-				<img src="shapes/sqrPyramid.png">
+			<div class="shape">
+				<div id="sqrPyramid">
+					<h3>Square Pyramid</h3>
+					<img src="shapes/sqrPyramid.png">
+				</div>
 				<details>Pyramid with a square as a base</details>
 			</div>
-			<div id="icosahedron" class="shape">
-				<h3>Icosahedron</h3>
-				<img src="shapes/icosahedron.png">
+			<div class="shape">
+				<div id="icosahedron">
+					<h3>Icosahedron</h3>
+					<img src="shapes/icosahedron.png">
+				</div>
 				<details>A 3D shape having 20 faces with one side</details>
 			</div>
 		</div>
+<!--   Pop up section       -->
+		<div class="pop" id="popupSphere" style="display: none;z-index: 5">
+			<form>
+				Enter Radius : <input id="sr" type="number" name="radius" min="0"><br>
+				<button>Calculate</button>
+			</form>
+		</div>
+		<div class="pop" id="popupCube" style="display: none;z-index: 5">
+			<form>
+				Enter Side Length : <input id="cs" type="number" name="side" min="0"><br>
+				<button>Calculate</button>
+			</form>
+		</div>
+		<div class="pop" id="popupCone" style="display: none;z-index: 5">
+			<form>
+				Enter Base Radius : <input id="cobr" type="number" name="radius" min="0"><br>
+				Enter Height : <input id="coh" type="number" name="height" min="0"><br>
+				<button>Calculate</button>
+			</form>
+		</div>
+		<div class="pop" id="popupCuboid" style="display: none;z-index: 5">
+			Enter Length : <input id="cul" type="number" name="length" min="0"><br>
+			Enter Depth : <input id="cud" type="number" name="depth" min="0"><br>
+			Enter Height : <input id="cuh" type="number" name="height" min="0"><br>
+			<button>Calculate</button>
+		</div>
+		<div class="pop" id="popupCylinder" style="display: none;z-index: 5">
+			<form>
+				Enter Base Radius : <input id="cyr" type="number" name="radius" min="0"><br>
+				Enter Height : <input id="cyh" type="number" name="height" min="0"><br>
+				<button>Calculate</button>
+			</form>
+		</div>
+		<div class="pop" id="popupTorus" style="display: none;z-index: 5">
+			<form>
+				Enter Major Radius : <input id="tma" type="number" name="major" min="0"><br>
+				Enter Minor Radius : <input id="tmi" type="number" name="minor" min="0"><br>
+				<button>Calculate</button>
+			</form>
+		</div>
+		<div class="pop" id="popupTetrahedron" style="display: none;z-index: 5">
+			<form>
+				Enter Side Length : <input id="tes" type="number" name="side" min="0"><br>
+				<button>Calculate</button>
+			</form>
+		</div>
+		<div class="pop" id="popupSqrPyramid" style="display: none;z-index: 5">
+			<form>
+				Enter Base Side : <input id="sps" type="number" name="side" min="0"><br>
+				Enter Height : <input id="sph" type="number" name="height" min="0"><br>
+				<button>Calculate</button>
+			</form>
+		</div>
+		<div class="pop" id="popupIcosahedron" style="display: none;z-index: 5">
+			<form>
+				Enter Side Length : <input id="is" type="number" name="side" min="0"><br>
+				<button>Calculate</button>
+			</form>
+		</div>
 
-		<div id="popup">
+
+<!-- Results -->
+		<div id="result">
 			
 		</div>
 	</main>

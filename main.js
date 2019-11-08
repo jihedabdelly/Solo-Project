@@ -19,10 +19,10 @@ function cone(radius, height){
 	}
 }
 
-function cuboid(l, w, h){
+function cuboid(length, depth, height){
 	return {
-		volume : l * w * h,
-		area : 2 * (l*w + l*h + w*h)  
+		volume : length * depth * height,
+		area : 2 * (length*depth + length*height + depth*height)  
 	}
 }
 
@@ -60,3 +60,29 @@ function icosahedron(side){
 		area : 5 * Math.sqrt(3) * (side**2) 
 	}
 }
+
+var radius = 0;
+var side = 0;
+var height = 0;
+var length = 0;
+var depth = 0;
+var minor = 0;
+var major = 0;
+
+$('#sphere').on('click', function() {
+	$('#container').hide()
+	//$('#container').css('filter', 'blur(10px)')
+	$('#popupSphere').show()
+
+	radius = $('#sr').val()
+
+	
+	
+})
+
+
+
+function blur() {
+	$('#container').blur()
+}
+

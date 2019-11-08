@@ -88,6 +88,12 @@ img {
     max-height: 100px;
 }
 
+#popupSphere{
+	position: absolute;
+	border: 2px solid green;
+	top: 50%;
+	left: 39%;
+}
 
 html { font-size: 22px; }
 body { padding: 1rem; }
