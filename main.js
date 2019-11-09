@@ -8,7 +8,7 @@ function sphere(radius){
 function cube(side){
 	return {
 		volume : side**3 ,
-		area : 6 * (radius**2) 
+		area : 6 * (side**2) 
 	}
 }
 
@@ -68,22 +68,208 @@ var length = 0;
 var depth = 0;
 var minor = 0;
 var major = 0;
+var vol = 0;
+var are = 0;
+var unit = "";
+var pow2 = "²";
+var pow3 = "³";
 
-$('#sphere').on('click', function() {
+function showpop() {
 	$('#container').hide()
 	//$('#container').css('filter', 'blur(10px)')
 	$('#popupSphere').show()
-
-	$('button').on('click', function(){
-	  radius = $('#sr').val()
-
- })
-	
-})
-
-
-
-function blur() {
-	$('#container').blur()
 }
 
+function showresult() {
+	$('#container').hide()
+	$('#popupSphere').hide()
+	$('#result').show()
+}
+
+$('#sphere').on('click', function() {
+    $('#container').hide()
+	$('#popupSphere').show()	
+	
+	$('#bt1').on('click', function(){
+	  	
+	  radius = $('#sr').val(); //1st variable
+
+	  unit = $('.dropdown').val();
+	  var unit2 = " "+unit + pow2
+	  var unit3 = " "+unit + pow3
+	  
+	  vol = sphere(radius).volume;
+	  are = sphere(radius).area
+
+	  alert("The volume of Sphere = " + Math.floor(vol*100)/100 +unit3+ " and its surface area = " +Math.floor(are*100)/100+unit2 )
+	  
+ })
+})
+
+$('#cube').on('click', function() {
+    $('#container').hide()
+	$('#popupCube').show()	
+	
+	$('#bt2').on('click', function(){
+	  	
+	  side = $('#cs').val(); //1st variable
+
+	  unit = $('.dropdown').val();
+	  var unit2 = " "+unit + pow2
+	  var unit3 = " "+unit + pow3
+	  
+	  vol = cube(side).volume;
+	  are = cube(side).area
+
+	  alert("The volume of Cube = " + Math.floor(vol*100)/100 +unit3+ " and its surface area = " +Math.floor(are*100)/100+unit2 )
+	  
+ })
+})
+
+$('#cone').on('click', function() {
+    $('#container').hide()
+	$('#popupCone').show()	
+	
+	$('#bt3').on('click', function(){
+	  	
+	  radius = $('#cobr').val(); //1st variable
+	  height = $('#coh').val();
+
+	  unit = $('.dropdown').val();
+	  var unit2 = " "+unit + pow2
+	  var unit3 = " "+unit + pow3
+	  
+	  vol = cone(radius, height).volume;
+	  are = cone(radius, height).area
+
+	  alert("The volume of Cone = " + Math.floor(vol*100)/100 +unit3+ " and its surface area = " +Math.floor(are*100)/100+unit2 )
+	  
+ })
+})
+
+$('#cuboid').on('click', function() {
+    $('#container').hide()
+	$('#popupCuboid').show()	
+	
+	$('#bt4').on('click', function(){
+	  	
+	  length = $('#cul').val(); //1st variable
+	  depth = $('#cud').val();
+	  height = $('#cuh').val();
+
+	  unit = $('.dropdown').val();
+	  var unit2 = " "+unit + pow2
+	  var unit3 = " "+unit + pow3
+	  
+	  vol = cuboid(length,depth,height).volume;
+	  are = cuboid(length,depth,height).area
+
+	  alert("The volume of Cuboid = " + Math.floor(vol*100)/100 +unit3+ " and its surface area = " +Math.floor(are*100)/100+unit2 )
+	  
+ })
+})
+
+$('#cylinder').on('click', function() {
+    $('#container').hide()
+	$('#popupCylinder').show()	
+	
+	$('#bt5').on('click', function(){
+	  	
+	  radius = $('#cyr').val(); //1st variable
+	  height = $('#cyh').val();
+
+	  unit = $('.dropdown').val();
+	  var unit2 = " "+unit + pow2
+	  var unit3 = " "+unit + pow3
+	  
+	  vol = cylinder(radius, height).volume;
+	  are = cylinder(radius, height).area
+
+	  alert("The volume of Cylinder = " + Math.floor(vol*100)/100 +unit3+ " and its surface area = " +Math.floor(are*100)/100+unit2 )
+	  
+ })
+})
+
+$('#torus').on('click', function() {
+    $('#container').hide()
+	$('#popupTorus').show()	
+	
+	$('#bt6').on('click', function(){
+	  	
+	  major = $('#tma').val(); //1st variable
+	  minor = $('#tmi').val();
+
+	  unit = $('.dropdown').val();
+	  var unit2 = " "+unit + pow2
+	  var unit3 = " "+unit + pow3
+	  
+	  vol = torus(minor, major).volume;
+	  are = torus(minor, major).area
+
+	  alert("The volume of Torus = " + Math.floor(vol*100)/100 +unit3+ " and its surface area = " +Math.floor(are*100)/100+unit2 )
+	  
+ })
+})
+
+$('#tetrahedron').on('click', function() {
+    $('#container').hide()
+	$('#popupTetrahedron').show()	
+	
+	$('#bt7').on('click', function(){
+	  	
+	  side = $('#tes').val(); //1st variable
+	  
+
+	  unit = $('.dropdown').val();
+	  var unit2 = " "+unit + pow2
+	  var unit3 = " "+unit + pow3
+	  
+	  vol = tetrahedron(side).volume;
+	  are = tetrahedron(side).area
+
+	  alert("The volume of Tetrahedron = " + Math.floor(vol*100)/100 +unit3+ " and its surface area = " +Math.floor(are*100)/100+unit2 )
+	  
+ })
+})
+
+$('#sqrPyramid').on('click', function() {
+    $('#container').hide()
+	$('#popupSqrPyramid').show()	
+	
+	$('#bt8').on('click', function(){
+	  	
+	  side = $('#sps').val(); //1st variable
+	  height = $('#sph').val();	 
+
+	  unit = $('.dropdown').val();
+	  var unit2 = " "+unit + pow2
+	  var unit3 = " "+unit + pow3
+	  
+	  vol = sqrPyramid(side, height).volume;
+	  are = sqrPyramid(side, height).area
+
+	  alert("The volume of Square Pyramid = " + Math.floor(vol*100)/100 +unit3+ " and its surface area = " +Math.floor(are*100)/100+unit2 )
+	  
+ })
+})
+
+$('#icosahedron').on('click', function() {
+    $('#container').hide()
+	$('#popupIcosahedron').show()	
+	
+	$('#bt9').on('click', function(){
+	  	
+	  side = $('#is').val(); //1st variable
+	  
+
+	  unit = $('.dropdown').val();
+	  var unit2 = " "+unit + pow2
+	  var unit3 = " "+unit + pow3
+	  
+	  vol = icosahedron(side).volume;
+	  are = icosahedron(side).area
+
+	  alert("The volume of Icosahedron = " + Math.floor(vol*100)/100 +unit3+ " and its surface area = " +Math.floor(are*100)/100+unit2 )
+	  
+ })
+})

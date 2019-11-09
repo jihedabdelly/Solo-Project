@@ -8,11 +8,11 @@ body {
 	
 	
 	overflow-y: scroll;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 h1 {
-	margin: 10px auto 15px auto;
+	margin: 60px auto 20px auto;
 }
 
 header {
@@ -37,7 +37,7 @@ main #container {
 
 #sphere {
 	grid-area: a;
-	
+	size: 20%
 }
  #cube {
 	grid-area: b;
@@ -88,7 +88,7 @@ img {
     max-height: 100px;
 }
 
-#popupSphere{
+.pop{
 	position: absolute;
 	border: 2px solid green;
 	top: 50%;
@@ -98,3 +98,8 @@ img {
 html { font-size: 22px; }
 body { padding: 1rem; }
 
+#result {
+	border: 2px solid green;
+	width: 100%;
+	height: 100%;
+}
